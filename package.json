@@ -1,5 +1,5 @@
 {
-    "name": "BackendTemplate",
+    "name": "backendTemplate-nodejs",
     "version": "1.0.0",
     "description": "",
     "main": "app.js",
@@ -20,6 +20,7 @@
         "express": "^4.16.3",
         "ibm-watson": "^4.4.0",
         "mongoose": "^5.2.8",
+        "morgan": "^1.9.1",
         "request": "^2.88.0"
     },
     "engines": {

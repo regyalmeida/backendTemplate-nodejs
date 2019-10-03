@@ -2,8 +2,9 @@
 
 require('dotenv').config();
 
-const express = require("express")
-const cfenv = require("cfenv")
+const express = require('express')
+const cfenv = require('cfenv')
+const morgan = require('morgan')
 const cors = require('cors')
 
 const app = express()
@@ -14,6 +15,8 @@ const serverRoutes = require('./routes/serverRoutes')
 
 //Data parsers for the request body
 app.use(express.json())
+
+app.use(morgan('dev'))
 
 //Allowing CORS to FRONTEND reqs in another domain
 app.use(cors())
@@ -31,7 +34,7 @@ app.use((error, req, res, next) => {
 //Starts the application server 
 var port = process.env.PORT || 6005
 app.listen(appEnv.port, function () {
-    console.log("Server running at: http://localhost:" + appEnv.port);
+    console.log('Server running at: http://localhost:' + appEnv.port);
 })
 
 module.exports = app
