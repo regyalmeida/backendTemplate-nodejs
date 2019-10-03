@@ -1,0 +1,28 @@
+{
+    "name": "BackendTemplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "test": "./node_modules/.bin/mocha --reporter spec --exit"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Regiany Almeida",
+    "license": "ISC",
+    "dependencies": {
+        "cfenv": "^1.1.0",
+        "cors": "^2.8.4",
+        "dotenv": "^8.1.0",
+        "express": "^4.16.3",
+        "ibm-watson": "^4.4.0",
+        "mongoose": "^5.2.8",
+        "request": "^2.88.0"
+    },
+    "engines": {
+        "node": "9.11.1"
+    }
+}
